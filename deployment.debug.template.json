@@ -63,8 +63,21 @@
             "status": "running",
             "restartPolicy": "always",
             "settings": {
-              "image": "${MODULES.Drone}",
-              "createOptions": {}
+              "image": "${MODULES.Drone.debug}",
+              "createOptions": {
+                "ExposedPorts": {
+                  "5678/tcp": {}
+                },
+                "HostConfig": {
+                  "PortBindings": {
+                    "5678/tcp": [
+                      {
+                        "HostPort": "5678"
+                      }
+                    ]
+                  }
+                }
+              }
             }
           },
           "SimulatedTemperatureSensor": {
