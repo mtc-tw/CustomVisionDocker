@@ -47,8 +47,11 @@ stages:
         bypassModules: 'SimulatedTemperatureSensor'
     - task: CopyFiles@2
       inputs:
-        Contents: 'deployment.template.json'
+        Contents: |
+          deployment.template.json
+          **/module.json
         TargetFolder: '$(Build.ArtifactStagingDirectory)'
+        OverWrite: true
     - task: PublishBuildArtifacts@1
       inputs:
         PathtoPublish: '$(Build.ArtifactStagingDirectory)'
