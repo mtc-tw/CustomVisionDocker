@@ -120,8 +120,8 @@
                         "registryCredentials": {
                             "default": {
                                 "address": "ntuasecontainer2.azurecr.io",
-                                "password": "$(CONTAINER_REGISTRY_PASSWORD)",
-                                "username": "$(CONTAINER_REGISTRY_USERNAME)"
+                                "password": "$CONTAINER_REGISTRY_PASSWORD",
+                                "username": "$CONTAINER_REGISTRY_USERNAME"
                             }
                         }
                     },
