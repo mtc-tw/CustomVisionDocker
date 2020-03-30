@@ -44,6 +44,7 @@ stages:
         templateFilePath: 'deployment.template.json'
         defaultPlatform: 'amd64'
         fillRegistryCredential: 'true'
+        bypassModules: 'SimulatedTemperatureSensor'
     - task: CopyFiles@2
       inputs:
         Contents: 'deployment.template.json'
