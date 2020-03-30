@@ -53,7 +53,7 @@
                 "modules": {
                     "Castle_ACRDrone": {
                         "settings": {
-                            "image": "ntuasecontainer2.azurecr.io/castle_customvision:githubtest",
+                            "image": "nickacr.azurecr.io/castle_customvision:githubtest",
                             "createOptions": {
                                 "ExposedPorts": {
                                     "80/tcp": {}
