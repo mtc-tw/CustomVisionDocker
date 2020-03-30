@@ -35,6 +35,7 @@ stages:
         templateFilePath: 'deployment.template.json'
         defaultPlatform: 'amd64'
     - task: AzureIoTEdge@2
+      displayName: AzureIoTEdge - Push module images to ACR
       inputs:
         action: 'Push module images'
         containerregistrytype: 'Azure Container Registry'
