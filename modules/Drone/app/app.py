@@ -20,7 +20,7 @@ app.config['MAX_CONTENT_LENGTH'] = 4 * 1024 * 1024
 # Default route just shows simple text
 @app.route('/')
 def index():
-    return 'CustomVision.ai model host harness---3'
+    return 'CustomVision.ai model host harness'
 
 # Like the CustomVision.ai Prediction service /image route handles either
 #     - octet-stream image file 
