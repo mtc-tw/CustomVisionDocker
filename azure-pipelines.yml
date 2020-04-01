@@ -46,12 +46,14 @@ stages:
         fillRegistryCredential: 'true'
         bypassModules: 'SimulatedTemperatureSensor'
     - task: AzureIoTEdge@2
+      displayName: AzureIoTEdge - Generate deployment manifest
       inputs:
         action: 'Generate deployment manifest'
         templateFilePath: 'deployment.template.json'
         defaultPlatform: 'amd64'
         deploymentManifestOutputPath: '$(System.DefaultWorkingDirectory)/config/deployment.json'
     - task: CopyFiles@2
+      displayName: CopyFiles
       inputs:
         Contents: |
           deployment.template.json
@@ -62,5 +64,5 @@ stages:
     - task: PublishBuildArtifacts@1
       inputs:
         PathtoPublish: '$(Build.ArtifactStagingDirectory)'
-        ArtifactName: 'drop'
+        ArtifactName: 'BuildModule'
         publishLocation: 'Container'
