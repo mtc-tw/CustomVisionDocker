@@ -11,8 +11,8 @@
                         "loggingOptions": "",
                         "registryCredentials": {
                             "nickacr": {
-                                "username": "$CONTAINER_REGISTRY_USERNAME_nickacr",
-                                "password": "$CONTAINER_REGISTRY_PASSWORD_nickacr",
+                                "username": "${CONTAINER_REGISTRY_USERNAME_nickacr}",
+                                "password": "${CONTAINER_REGISTRY_PASSWORD_nickacr}",
                                 "address": "nickacr.azurecr.io"
                             }
                         }
