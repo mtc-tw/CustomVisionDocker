@@ -34,19 +34,11 @@ stages:
         templateFilePath: 'deployment.template.json'
         defaultPlatform: 'amd64'
         fillRegistryCredential: 'true'
-    - task: AzureIoTEdge@2
-      displayName: AzureIoTEdge - Generate deployment manifest
-      inputs:
-        action: 'Generate deployment manifest'
-        templateFilePath: 'deployment.template.json'
-        defaultPlatform: 'amd64'
-        deploymentManifestOutputPath: '$(System.DefaultWorkingDirectory)/config/deployment.json'
     - task: CopyFiles@2
       displayName: CopyFiles
       inputs:
         Contents: |
           deployment.template.json
-          **/deployment.json
           **/module.json
         TargetFolder: '$(Build.ArtifactStagingDirectory)'
     - task: PublishBuildArtifacts@1
