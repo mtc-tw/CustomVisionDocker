@@ -68,7 +68,26 @@
                                 }
                             }
                         }
+                    },
+                    "Drone_elder": {
+                        "version": "1.0",
+                        "type": "docker",
+                        "status": "running",
+                        "restartPolicy": "always",
+                        "settings": {
+                            "image": "nickacr.azurecr.io/drone:0.0.1-amd64",
+                            "createOptions": {
+                                "HostConfig": {
+                                    "PortBindings": {
+                                        "80/tcp": [{
+                                            "HostPort": "8081"
+                                        }]
+                                    }
+                                }
+                            }
+                        }
                     }
+
                 }
             }
         },
