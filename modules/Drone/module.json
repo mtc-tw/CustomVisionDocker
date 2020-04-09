@@ -4,7 +4,7 @@
     "image": {
         "repository": "nickacr.azurecr.io/drone",
         "tag": {
-            "version": "04091744",
+            "version": "04091745",
             "platforms": {
                 "amd64": "./Dockerfile",
                 "amd64.debug": "./Dockerfile.amd64.debug",
